@@ -10,9 +10,9 @@
     <br />
     <h3>Confirm address for the shipping replacement card</h3>
     <br />
+    @Html.DisplayFor(x=>x.SelectedAddress)
     @foreach (var item in Model.Addresses)
     {
-
         <div><label>@Html.RadioButton("ABC", @item)@item</label></div>
 
     }

@@ -11,10 +11,17 @@ namespace netcoreapp.Controllers
     {
         public IActionResult Index()
         {
+            string signedRequest =HttpContext.Request.Form["signed_request"];
+
+            //string signedRequestParam = Request.Params["signed_request"];            
+            string payload = signedRequest.Split('.')[1];
+            string expectedSignature = signedRequest.Split('.')[0];
+
             var model = new CreditCardViewModel
             {
                 Name = "Test Credit Card",
-                Addresses = new string[] { "Address1", "Address2" }
+                Addresses = new string[] { "Address1", "Address2" },
+                SelectedAddress = expectedSignature;
             };
             return View(model);
         }
