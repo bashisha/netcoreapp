@@ -3,7 +3,6 @@ C:\Users\Bernie\Documents\Projects\netcoreapp\netcoreapp\bin\Debug\netcoreapp2.0
 C:\Users\Bernie\Documents\Projects\netcoreapp\netcoreapp\bin\Debug\netcoreapp2.0\netcoreapp.runtimeconfig.dev.json
 C:\Users\Bernie\Documents\Projects\netcoreapp\netcoreapp\bin\Debug\netcoreapp2.0\netcoreapp.dll
 C:\Users\Bernie\Documents\Projects\netcoreapp\netcoreapp\bin\Debug\netcoreapp2.0\netcoreapp.pdb
-C:\Users\Bernie\Documents\Projects\netcoreapp\netcoreapp\obj\Debug\netcoreapp2.0\netcoreapp.csprojResolveAssemblyReference.cache
 C:\Users\Bernie\Documents\Projects\netcoreapp\netcoreapp\obj\Debug\netcoreapp2.0\netcoreapp.csproj.CoreCompileInputs.cache
 C:\Users\Bernie\Documents\Projects\netcoreapp\netcoreapp\obj\Debug\netcoreapp2.0\netcoreapp.AssemblyInfoInputs.cache
 C:\Users\Bernie\Documents\Projects\netcoreapp\netcoreapp\obj\Debug\netcoreapp2.0\netcoreapp.AssemblyInfo.cs
