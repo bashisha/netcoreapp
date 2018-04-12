@@ -43,7 +43,7 @@ namespace netcoreapp
             {
                 routes.MapRoute(
                     name: "default",
-                    template: "{controller=Credit}/{action=Index}/{id?}");
+                    template: "{controller=C}/{action=Index}/{id?}");
             });
         }
     }
