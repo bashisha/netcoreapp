@@ -6,7 +6,7 @@
 <h2>Index</h2>
 <form method="post" action="/Card/Index">
 
-    h3>Although the customer will not receive their new card for several days, they will still have the ability to use their digital wallet.</h3>
+    <h3>Although the customer will not receive their new card for several days, they will still have the ability to use their digital wallet.</h3>
     <br />
     <h3>Confirm address for the shipping replacement card</h3>
     <br />
@@ -18,7 +18,7 @@
     }
     <label>To Ship to an alternative address, enter a One time address</label>
     <br />
-    @Html.ActionLink("Back", "BackToPrev", "Credit", null, new { @class = "btn btn-primary btn-large" })
-    @Html.ActionLink("Continue", "Shipping", "Credit", null, new { @class = "btn btn-primary btn-large" })
+    @Html.ActionLink("Back", "BackToPrev", "Card", null, new { @class = "btn btn-primary btn-large" })
+    @Html.ActionLink("Continue", "Shipping", "Card", null, new { @class = "btn btn-primary btn-large" })
 
 </form>

@@ -1,0 +1,25 @@
+@model netcoreapp.Models.CreditCardViewModel
+<h3>Summary</h3>
+<div>
+    Summary Section
+</div>
+<div>
+    <h3>Replacement Card</h3>
+    
+    @Html.DisplayFor(model=>model.Name)
+</div>
+<div>
+    <h3>Shipping Address</h3>
+    @Html.DisplayFor(model=>model.Addresses[0])
+</div>
+<div>
+    <h3>Delivery Method</h3>
+    @Html.DisplayFor(model=>model.Addresses[0])
+</div>
+<div>
+    <h3>Summary Communication</h3>
+    Blah Blah
+</div>
+@Html.ActionLink("Back", "Shipping", "Card", null, new { @class = "btn btn-primary btn-large" })
+@Html.ActionLink("Continue", "Finish", "Card", null, new { @class = "btn btn-primary btn-large" })
+

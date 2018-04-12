@@ -18,5 +18,41 @@ namespace netcoreapp.Controllers
             };
             return View(model);
         }
+
+        public IActionResult BackToPrev()
+        {
+            return View();
+        }
+
+        public IActionResult Shipping()
+        {
+            var model = new CreditCardViewModel
+            {
+                Name = "Test Credit Card",
+                Addresses = new string[] { "Address1", "Address2" }
+            };
+            return View(model);
+        }
+
+        public IActionResult Confirmation()
+        {
+            var model = new CreditCardViewModel
+            {
+                Name = "Test Credit Card",
+                Addresses = new string[] { "Address1", "Address2" }
+            };
+            return View(model);
+        }
+
+        public void Finish()
+        {
+            var model = new CreditCardViewModel
+            {
+                Name = "Test Credit Card",
+                Addresses = new string[] { "Address1", "Address2" }
+            };
+            //return View(model);
+        }
+
     }
 }
