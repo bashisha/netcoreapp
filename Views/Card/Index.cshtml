@@ -3,14 +3,47 @@
     ViewData["Title"] = "Index";
 }
 
-<h2>Index</h2>
 <form method="post" action="/Card/Index">
+    <div class="row">
+        <div class="col-md-2">
+            <label>Customer</label>
+        </div>
 
-    <h3>Although the customer will not receive their new card for several days, they will still have the ability to use their digital wallet.</h3>
+        <div class="col-md-2">
+            <label>Total Assets</label>
+
+        </div>
+        <div class="col-md-2">
+            <label>Solicitation Preference</label>
+
+        </div>
+        <div class="col-md-2">
+            <label>Replacement Card</label>
+
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-2">
+
+            @Html.DisplayFor(x => x.CustomerName)
+        </div>
+        <div class="col-md-2">
+
+            @Html.DisplayFor(x => x.TotalAssets)
+        </div>
+        <div class="col-md-2">
+
+            @Html.DisplayFor(x => x.SolicitationPre)
+        </div>
+        <div class="col-md-2">
+
+            @Html.DisplayFor(x => x.CardNumber)
+        </div>
+    </div>
+    <h4>Although the customer will not receive their new card for several days, they will still have the ability to use their digital wallet.</h4>
+    <h4>Confirm address for the shipping replacement card</h4>
     <br />
-    <h3>Confirm address for the shipping replacement card</h3>
-    <br />
-    @Html.DisplayFor(x=>x.SelectedAddress)
+    @Html.DisplayFor(x => x.SelectedAddress)
     @foreach (var item in Model.Addresses)
     {
         <div><label>@Html.RadioButton("ABC", @item)@item</label></div>

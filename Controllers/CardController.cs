@@ -11,15 +11,11 @@ namespace netcoreapp.Controllers
     {
         public IActionResult Index()
         {
-            //string signedRequest =HttpContext.Request.Form["signed_request"];
-            //string signedRequestParam = Request.Params["signed_request"];            
-            //string payload = signedRequest.Split('.')[1];
-            //string expectedSignature = signedRequest.Split('.')[0];
-
             var model = new CreditCardViewModel
             {
-                Name = "Test Credit Card",
-                Addresses = new string[] { "Address1", "Address2" }
+                CardNumber = "Test Credit Card",
+                CustomerName = "Richard Punkrest",
+                Addresses = new string[] { "Address 1", "Address 2" }
             };
             return View(model);
         }
@@ -33,7 +29,7 @@ namespace netcoreapp.Controllers
         {
             var model = new CreditCardViewModel
             {
-                Name = "Test Credit Card",
+                CardNumber = "Test Credit Card",
                 Addresses = new string[] { "Address1", "Address2" }
             };
             return View(model);
@@ -43,7 +39,7 @@ namespace netcoreapp.Controllers
         {
             var model = new CreditCardViewModel
             {
-                Name = "Test Credit Card",
+                CardNumber = "Test Credit Card",
                 Addresses = new string[] { "Address1", "Address2" }
             };
             return View(model);
@@ -53,7 +49,7 @@ namespace netcoreapp.Controllers
         {
             var model = new CreditCardViewModel
             {
-                Name = "Test Credit Card",
+                CardNumber = "Test Credit Card",
                 Addresses = new string[] { "Address1", "Address2" }
             };
             //return View(model);

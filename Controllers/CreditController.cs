@@ -15,7 +15,7 @@ namespace netcoreapp.Controllers
         {
             var model = new CreditCardViewModel
             {
-                Name = "Test Credit Card",
+                CardNumber = "Test Credit Card",
                 Addresses = new string[] { "Address1", "Address2" }
             };
             return View(model);
@@ -30,7 +30,7 @@ namespace netcoreapp.Controllers
         {
             var model = new CreditCardViewModel
             {
-                Name = "Test Credit Card",
+                CardNumber = "Test Credit Card",
                 Addresses = new string[] { "Address1", "Address2" }
             };
             return View(model);
@@ -40,7 +40,7 @@ namespace netcoreapp.Controllers
         {
             var model = new CreditCardViewModel
             {
-                Name = "Test Credit Card",
+                CardNumber = "Test Credit Card",
                 Addresses = new string[] { "Address1", "Address2" }
             };
             return View(model);
@@ -50,7 +50,7 @@ namespace netcoreapp.Controllers
         {
             var model = new CreditCardViewModel
             {
-                Name = "Test Credit Card",
+                CardNumber = "Test Credit Card",
                 Addresses = new string[] { "Address1", "Address2" }
             };
             //return View(model);

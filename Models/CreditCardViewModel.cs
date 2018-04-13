@@ -8,7 +8,12 @@ namespace netcoreapp.Models
     public class CreditCardViewModel
     {
         public CreditCardViewModel() { }
-        public string Name { get; set; }
+        public string CustomerName { get; set; }
+        public string TotalAssets { get; set; }
+        public string CustomerValue { get; set; }
+        public string SolicitationPre { get; set; }
+        public string AuthenticationLevel { get; set; }
+        public string CardNumber { get; set; }
         public string[] Addresses { get; set; }
         public string DeliveryMethod { get; set; }
         public string SelectedAddress { get; set; }
