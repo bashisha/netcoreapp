@@ -4,6 +4,7 @@
 }
 
 <form method="post" action="/Card/Index">
+    <br />
     <div class="row">
         <div class="col-md-2">
             <label>Customer</label>
@@ -45,8 +46,8 @@
     <br />
     @Html.DisplayFor(x => x.SelectedAddress)
     @foreach (var item in Model.Addresses)
-    {
-        <div><label>@Html.RadioButton("ABC", @item)@item</label></div>
+    {       
+        <div><label>@Html.RadioButtonFor(m => @item.IsSelected, item.IsSelected)@item.MailingAddress</label></div>
 
     }
     <label>To Ship to an alternative address, enter a One time address</label>

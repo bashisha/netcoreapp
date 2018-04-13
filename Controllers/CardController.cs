@@ -9,14 +9,21 @@ namespace netcoreapp.Controllers
 {
     public class CardController : Controller
     {
+        CreditCardViewModel model = new CreditCardViewModel
+        {
+            CardNumber = "Card 2 (...9754)",
+            TotalAssets = "$2,252,898.00",
+            CustomerValue = "Very High",
+            SolicitationPre = "Phone and email OK",
+            CustomerName = "Richard Gere",
+            Addresses = new Address[]{ new Address{
+                IsSelected=true,
+                MailingAddress="101 Main St, Charlotte, NC 28262" },
+               new Address{IsSelected=false,MailingAddress= "50 Croby St. New York, NY 10033 " }
+            }
+        };
         public IActionResult Index()
         {
-            var model = new CreditCardViewModel
-            {
-                CardNumber = "Test Credit Card",
-                CustomerName = "Richard Punkrest",
-                Addresses = new string[] { "Address 1", "Address 2" }
-            };
             return View(model);
         }
 
@@ -27,31 +34,17 @@ namespace netcoreapp.Controllers
 
         public IActionResult Shipping()
         {
-            var model = new CreditCardViewModel
-            {
-                CardNumber = "Test Credit Card",
-                Addresses = new string[] { "Address1", "Address2" }
-            };
+            model.SelectedAddress = model.Addresses.Where(x => x.IsSelected).FirstOrDefault().MailingAddress;
             return View(model);
         }
 
         public IActionResult Confirmation()
-        {
-            var model = new CreditCardViewModel
-            {
-                CardNumber = "Test Credit Card",
-                Addresses = new string[] { "Address1", "Address2" }
-            };
+        {        
             return View(model);
         }
 
         public void Finish()
-        {
-            var model = new CreditCardViewModel
-            {
-                CardNumber = "Test Credit Card",
-                Addresses = new string[] { "Address1", "Address2" }
-            };
+        {         
             //return View(model);
         }
 
