@@ -47,7 +47,7 @@
     @Html.DisplayFor(x => x.SelectedAddress)
     @foreach (var item in Model.Addresses)
     {       
-        <div><label>@Html.RadioButtonFor(m => @item.IsSelected, item.IsSelected)@item.MailingAddress</label></div>
+        <div><label>@Html.RadioButtonFor(m => @item.MailingAddress, item.IsSelected)@item.MailingAddress</label></div>
 
     }
     <label>To Ship to an alternative address, enter a One time address</label>

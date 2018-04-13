@@ -17,7 +17,7 @@ namespace netcoreapp.Models
         public Address[] Addresses { get; set; }
         public bool IsExpeditedDelivery { get; set; }
         public string SelectedAddress { get; set; }
-        public bool IsDeliveryStandard { get; set; }
+        public string DeliveryMethod { get; set; }
 
     }
 }

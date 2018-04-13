@@ -10,16 +10,27 @@
 </div>
 <div>
     <h3>Shipping Address</h3>
-    @Html.DisplayFor(model=>model.SelectedAddress)
+    @Html.DisplayFor(model=>model.Addresses[0].MailingAddress)
 </div>
 <div>
     <h3>Delivery Method</h3>
-    @Html.DisplayFor(model=>model.Addresses[0])
+    @Html.DisplayFor(model=>model.DeliveryMethod)
 </div>
 <div>
     <h3>Summary Communication</h3>
     Blah Blah
 </div>
 @Html.ActionLink("Back", "Shipping", "Card", null, new { @class = "btn btn-primary btn-large" })
+<button onclick="finishProcess">Finish</button>
 @Html.ActionLink("Continue", "Finish", "Card", null, new { @class = "btn btn-primary btn-large" })
 
+<script type="text/javascript" defer="defer">
+    var signedRequest = document.getElementById("<%= hdnSignedRequest.ClientID %>").value;
+    alert(signedRequest);
+    function finishProcess(pValue) {
+        sr = JSON.parse(signedRequest);
+        Sfdc.canvas.client.publish(sr.client, {
+            name: 'myns.finished',
+            payload: { value : pValue} });
+    }
+</script>

@@ -20,7 +20,8 @@ namespace netcoreapp.Controllers
                 IsSelected=true,
                 MailingAddress="101 Main St, Charlotte, NC 28262" },
                new Address{IsSelected=false,MailingAddress= "50 Croby St. New York, NY 10033 " }
-            }
+            },
+            DeliveryMethod="Standard"
         };
         public IActionResult Index()
         {
